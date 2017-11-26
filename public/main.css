@@ -1,0 +1,59 @@
+/* Demonstrating use of custom web fonts. */
+
+@font-face {
+  font-family: 'indus-script';
+  src: url('fonts/indus-script.eot');
+  src: url('fonts/indus-script.eot?#iefix') format('embedded-opentype'), url('fonts/indus-script.woff') format('woff'),
+    url('fonts/indus-script.woff') format('woff'), url('fonts/indus-script.ttf') format('truetype'),
+    url('fonts/indus-script.svg#ciclefina') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.masthead {
+  background-color: grey;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Seal_at_Mohenjo_Daro.jpg/800px-The_Seal_at_Mohenjo_Daro.jpg');
+  background-repeat: repeat;
+  min-width: 100vh;
+  min-height: 5vh;
+}
+
+body {
+  background-color: lightBlue;
+}
+
+body h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.glyph-container {
+  min-height: 30vh;
+  padding-top: 1%;
+}
+
+.glyph {
+  font-family: indus-script;
+  font-size: 2em;
+  color: #6b410e;
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 2%;
+  transition: all .2s ease-in-out;
+}
+
+.glyph:hover {
+  background-color: white;
+  -webkit-transform: scale(2.5); /* Safari and Chrome */
+  -moz-transform: scale(2.5); /* Firefox */
+  -ms-transform: scale(2.5); /* IE 9 */
+  -o-transform: scale(2.5); /* Opera */
+  transform: scale(2.5);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 5px;
+}

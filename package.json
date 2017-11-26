@@ -1,0 +1,25 @@
+{
+  "name": "projekt-indus",
+  "version": "1.0.0",
+  "description": "An interactive educational page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": ["indus"],
+  "author": "O. A. Malik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarcodex/projekt-indus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omarcodex/projekt-indus/issues"
+  },
+  "homepage": "https://github.com/omarcodex/projekt-indus#readme"
+}

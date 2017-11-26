@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Our custom CSS -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Indus Script Explorer</title>
+  </head>
+  <main>
+    <nav>
+      <!-- Header shall go here -->
+    </nav>
+    <body>
+      <div class="masthead">
+      </div>
+      <div class="container">
+        <h1 class="text-center">Welcome to the Ancient Greek Explorer</h1>
+      </div>
+
+      <div class="row"> <!-- New -->
+        <div class="col-md-6 col-md-offset-3">
+          <section class="panel panel-info">
+            <div class="panel panel-heading">
+              <h3 class="panel-title">Enter New Word</h3>
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+
+                <label for="new-word-1">Write word below (in greek):</label>
+                <input class="form-control" id="new-word-1" rows="3"></input>
+
+                <label for="new-word-2">Write meaning below (in english):</label>
+                <input class="form-control" id="new-word-2" rows="3"></input>
+
+              </div>
+              <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Enter<span class=''></span> </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+        <section class="glyph-container border">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="">
+                <div class="text-center" id="user-typed-output"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <section class="panel panel-info">
+            <div class="panel panel-heading">
+              <h3 class="panel-title">Word Search</h3>
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <label for="user-typed-input">Write something below:</label>
+                <textarea class="form-control" id="user-typed-input" rows="3"></textarea>
+              </div>
+              <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Find <span class='glyphicon glyphicon-copy'></span> </button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section id='demo'>
+      </section>
+    </body>
+    <footer>
+      <div class='row'>
+        <div class="col-md-12 col-md-offset-0 text-center">
+          <div>Sources: <a href='https://www.mohenjodaroonline.net/index.php/indus-script'>www.mohenjodaroonline.net</a> | <a href="https://github.com/omarcodex">@omarcodex</a> | Wikimedia Commons</div>
+        </div>
+    </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Our custom JS code -->
+    <script src="dynamic.js"></script>
+  </main>
+  <!-- Source: https://www.mohenjodaroonline.net/index.php/indus-script -->
+</html>
