@@ -20,14 +20,14 @@ function submitNewEntry(e) {
 }
 
 let userInput = document.getElementById('user-typed-input');
-let userOutput = document.getElementById('user-typed-output');
+let userOutput = document.getElementById('results-output');
 document.getElementById('user-typed-input-btn').addEventListener('click', translateText);
 
 function translateText(e) {
   userOutput.innerHTML = ''; // Resetting the field.
   e.preventDefault();
   let userSearchedForText = userInput.value;
-  // let alteredText = userTranslatedText.split('');
+  let finalResults = null;
 
   var myRe = new RegExp(userSearchedForText);
 
@@ -52,12 +52,18 @@ function translateText(e) {
         });
       });
       console.log(results);
-      return results;
+      finalResults = results;
+
+      finalResults.map(function(i) {
+        let glyf = document.createElement('div');
+        glyf.innerHTML = "<div class=''>" + i + '</div>';
+        userOutput.append(glyf);
+      });
     });
   // Appending the glyphs one-by-one for user readability:
-  // alteredText.map(function(i) {
+  // finalResults.map(function(i) {
   //   let glyf = document.createElement('div');
-  //   glyf.innerHTML = "<div class='glyph'>" + i + '</div>';
+  //   glyf.innerHTML = "<div class=''>" + i + '</div>';
   //   userOutput.append(glyf);
   // });
 }
