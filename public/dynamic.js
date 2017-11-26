@@ -1,5 +1,5 @@
-// Code for simulating translation into Indus script.
-// By O.A.M. 2017 @ omarcodex
+// Code for searching crowd-sourced Ancient Greek dictionary list.
+// Made in 2017 by @omarcodex. Contact: oam@cal.berkeley.edu
 
 let newWord1 = document.getElementById('new-word-1');
 let newWord2 = document.getElementById('new-word-2');
@@ -14,7 +14,6 @@ function submitNewEntry(e) {
   let data = {};
   data[newWord1.value] = newWord2.value;
   entries.push(data);
-  // console.log(data); // Debugging.
   window.alert('Thanks for adding a new entry!');
   newWordForm.reset();
 }
@@ -24,7 +23,7 @@ let userOutput = document.getElementById('results-output');
 document.getElementById('user-typed-input-btn').addEventListener('click', translateText);
 
 function translateText(e) {
-  userOutput.innerHTML = ''; // Resetting the field.
+  userOutput.innerHTML = '';
   e.preventDefault();
   let userSearchedForText = userInput.value;
   let finalResults = null;
@@ -36,23 +35,15 @@ function translateText(e) {
     .orderByKey()
     .once('value')
     .then(function(snapshot) {
-      // console.log(snapshot);
       var results = [];
-
       snapshot.forEach(item => {
-        // console.log(item.val());
-
         item.forEach(subitem => {
-          // console.log(subitem.val());
-          // console.log(subitem.val().match(myRe));
-          // let found = false;
           if (subitem.val().match(myRe)) {
             results.push(subitem.key);
           }
         });
       });
-      console.log(results);
-      finalResults = results;
+      finalResults = results; // DEV.
 
       finalResults.map(function(i) {
         let glyf = document.createElement('div');
@@ -60,10 +51,4 @@ function translateText(e) {
         userOutput.append(glyf);
       });
     });
-  // Appending the glyphs one-by-one for user readability:
-  // finalResults.map(function(i) {
-  //   let glyf = document.createElement('div');
-  //   glyf.innerHTML = "<div class=''>" + i + '</div>';
-  //   userOutput.append(glyf);
-  // });
 }
