@@ -14,7 +14,8 @@ function submitNewEntry(e) {
   let data = {};
   data[newWord1.value] = newWord2.value;
   entries.push(data);
-  console.log(data); // Debugging.
+  // console.log(data); // Debugging.
+  window.alert('Thanks for adding a new entry!');
   newWordForm.reset();
 }
 
