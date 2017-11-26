@@ -1,0 +1,43 @@
+[debug] [2017-11-26T18:13:35.356Z] ----------------------------------------------------------------------
+[debug] [2017-11-26T18:13:35.359Z] Command:       /Users/oam/.nvm/versions/node/v6.11.0/bin/node /Users/oam/.nvm/versions/node/v6.11.0/bin/firebase serve
+[debug] [2017-11-26T18:13:35.360Z] CLI Version:   3.13.1
+[debug] [2017-11-26T18:13:35.360Z] Platform:      darwin
+[debug] [2017-11-26T18:13:35.360Z] Node Version:  v6.11.0
+[debug] [2017-11-26T18:13:35.360Z] Time:          Sun Nov 26 2017 10:13:35 GMT-0800 (PST)
+[debug] [2017-11-26T18:13:35.360Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-26T18:13:35.379Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-26T18:13:35.379Z] > authorizing via signed-in user
+[debug] [2017-11-26T18:13:35.382Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-26T18:13:35.382Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/H5wC2iAE4DKhRctFRpqwIlufvIn2IgfXE0806qPLv3C25Mtu_-xtj5Vzf0VP3gQ2',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Nov 26 2017 10:13:35 GMT-0800 (PST)
+[debug] [2017-11-26T18:13:35.642Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-26T18:13:35.687Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/projekt-greek  
+ Sun Nov 26 2017 10:13:35 GMT-0800 (PST)
+[debug] [2017-11-26T18:13:36.220Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-26T18:13:36.221Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/projekt-greek/tokens  
+ Sun Nov 26 2017 10:13:36 GMT-0800 (PST)
+[debug] [2017-11-26T18:13:37.005Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/oam/Desktop/GitHub/projekt-greek'...
+[info] 
+[debug] [2017-11-26T18:13:37.011Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/projekt-greek  
+ Sun Nov 26 2017 10:13:37 GMT-0800 (PST)
+[debug] [2017-11-26T18:13:37.616Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-26T18:13:37.617Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/500952742134/clients/_:getWebAppConfig  
+ Sun Nov 26 2017 10:13:37 GMT-0800 (PST)
+[debug] [2017-11-26T18:13:38.230Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-26T18:13:38.275Z] TypeError: Cannot read property 'public' of undefined
+    at Server.<anonymous> (/Users/oam/.nvm/versions/node/v6.11.0/lib/node_modules/firebase-tools/lib/serve/hosting.js:34:17)
+    at Server.g (events.js:292:16)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:185:7)
+    at emitListeningNT (net.js:1284:10)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:128:9)
+[error] 
+[error] Error: An unexpected error has occurred.

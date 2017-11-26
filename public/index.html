@@ -28,7 +28,7 @@
             <div class="panel panel-heading">
               <h3 class="panel-title">Enter New Word</h3>
             </div>
-            <div class="panel-body">
+            <form id="new-word-form" class="panel-body">
               <div class="form-group">
 
                 <label for="new-word-1">Write word below (in greek):</label>
@@ -38,8 +38,8 @@
                 <input class="form-control" id="new-word-2" rows="3"></input>
 
               </div>
-              <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Enter<span class=''></span> </button>
-            </div>
+              <button id="new-word-submit" class="btn btn-lg btn-primary">Enter<span class=''></span></button>
+            </form>
           </section>
         </div>
       </div>
@@ -87,6 +87,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Our custom JS code -->
     <script src="dynamic.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+var config = {
+  apiKey: 'AIzaSyCgZHp5WFQfqpzjaPfMuW48l7_q8XJoVmQ',
+  authDomain: 'projekt-greek.firebaseapp.com',
+  databaseURL: 'https://projekt-greek.firebaseio.com',
+  projectId: 'projekt-greek',
+  storageBucket: 'projekt-greek.appspot.com',
+  messagingSenderId: '500952742134'
+};
+firebase.initializeApp(config);
+</script>
   </main>
   <!-- Source: https://www.mohenjodaroonline.net/index.php/indus-script -->
 </html>
