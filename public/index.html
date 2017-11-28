@@ -22,6 +22,42 @@
         <h1 class="text-center">Welcome to Ancient Greek Lookup (beta)</h1>
       </div>
 
+            <section class="row">
+              <!-- Begin word retrieval section -->
+              <div class="col-md-6 col-md-offset-3">
+                <section class="panel panel-info">
+                  <div class="panel panel-heading">
+                    <h3 class="panel-title">Word Search</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <label for="user-typed-input">Write something below:</label>
+                      <input class="form-control" id="user-typed-input" rows="3"></input>
+                    </div>
+                    <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Find it!
+                      <span class='glyphicon glyphicon-copy'></span>
+                    </button>
+                  </div>
+                </section>
+              </div>
+            </section>
+            
+            <section class="glyph-container">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <section class="panel panel-info">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Results</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="text-center" id="results-output"></div>
+                    </div>
+                  </section>
+ 
+                </div>
+              </div>
+            </section>
+
       <section class="row"> <!-- Begin word input section -->
         <div class="col-md-6 col-md-offset-3">
           <section class="panel panel-info">
@@ -41,33 +77,6 @@
               <button id="new-word-submit" class="btn btn-lg btn-primary">Enter<span class=''></span></button>
             </form>
           </section>
-        </div>
-      </section>
-
-      <section class="row"> <!-- Begin word retrieval section -->
-        <div class="col-md-6 col-md-offset-3">
-          <section class="panel panel-info">
-            <div class="panel panel-heading">
-              <h3 class="panel-title">Word Search</h3>
-            </div>
-            <div class="panel-body">
-              <div class="form-group">
-                <label for="user-typed-input">Write something below:</label>
-                <input class="form-control" id="user-typed-input" rows="3"></input>
-              </div>
-              <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Find it!<span class='glyphicon glyphicon-copy'></span> </button>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <section class="glyph-container border">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <div class="">
-              <div class="text-center" id="results-output"></div>
-            </div>
-          </div>
         </div>
       </section>
 

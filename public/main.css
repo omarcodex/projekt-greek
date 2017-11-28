@@ -27,9 +27,9 @@ body h2 {
   justify-content: center;
 }
 
-.glyph-container {
-  min-height: 30vh;
-  padding-top: 1%;
+.glyph-container .panel-body {
+  min-height: 20vh;
+  /* padding-top: 1%; */
 }
 
 .glyph {
