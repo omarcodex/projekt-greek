@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Our custom CSS -->
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>Ancient Greek Explorer</title>
+    <title>Ancient Greek Lookup (beta)</title>
   </head>
   <main>
     <nav>
@@ -19,10 +19,46 @@
       <div class="masthead">
       </div>
       <div class="container">
-        <h1 class="text-center">Welcome to the Ancient Greek Explorer</h1>
+        <h1 class="text-center">Welcome to Ancient Greek Lookup (beta)</h1>
       </div>
 
-      <section class="row"> <!-- New -->
+            <section class="row">
+              <!-- Begin word retrieval section -->
+              <div class="col-md-6 col-md-offset-3">
+                <section class="panel panel-info">
+                  <div class="panel panel-heading">
+                    <h3 class="panel-title">Word Search</h3>
+                  </div>
+                  <form class="panel-body">
+                    <div class="form-group">
+                      <label for="user-typed-input">Write something below:</label>
+                      <input class="form-control" id="user-typed-input" rows="3"></input>
+                    </div>
+                    <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Find it!
+                      <span class='glyphicon glyphicon-copy'></span>
+                    </button>
+                  </form>
+                </section>
+              </div>
+            </section>
+            
+            <section class="glyph-container">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <section class="panel panel-info">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Results</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="text-center" id="results-output"></div>
+                    </div>
+                  </section>
+ 
+                </div>
+              </div>
+            </section>
+
+      <section class="row"> <!-- Begin word input section -->
         <div class="col-md-6 col-md-offset-3">
           <section class="panel panel-info">
             <div class="panel panel-heading">
@@ -44,38 +80,31 @@
         </div>
       </section>
 
-      <section class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <section class="panel panel-info">
-            <div class="panel panel-heading">
-              <h3 class="panel-title">Word Search</h3>
-            </div>
-            <div class="panel-body">
-              <div class="form-group">
-                <label for="user-typed-input">Write something below:</label>
-                <input class="form-control" id="user-typed-input" rows="3"></input>
-              </div>
-              <button id="user-typed-input-btn" class="btn btn-lg btn-primary">Find <span class='glyphicon glyphicon-copy'></span> </button>
-            </div>
-          </section>
-        </div>
-      </section>
+    <section>
+      <div class="row">
+        <div class="col-md-12"><!-- Begin donate section -->
+            <div class="text-center" id="donate-section">
 
-      <section class="glyph-container border">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <div class="">
-              <div class="text-center" id="results-output"></div>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+              ">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+
             </div>
-          </div>
         </div>
-      </section>
+      </div>
+      
+
+    </section>
 
     </body>
     <footer>
       <div class='row'>
         <div class="col-md-12 col-md-offset-0 text-center">
-          <div>Credit: <a href="https://github.com/omarcodex">@omarcodex</a></div>
+          <div>Made by <a href="https://github.com/omarcodex">@omarcodex</a></div>
         </div>
     </div>
     </footer>
