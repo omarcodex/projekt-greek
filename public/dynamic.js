@@ -39,7 +39,7 @@ function translateText(e) {
       snapshot.forEach(item => {
         item.forEach(subitem => {
           if (subitem.val().match(myRe)) {
-            results.push(subitem.key);
+            results.push(subitem);
           }
         });
       });
@@ -47,7 +47,7 @@ function translateText(e) {
 
       finalResults.map(function(i) {
         let glyf = document.createElement('div');
-        glyf.innerHTML = "<div class=''>" + i + '</div>';
+        glyf.innerHTML = "<div class=''>" + i.key + ' : ' + i.val() + '</div>';
         userOutput.append(glyf);
       });
     });
