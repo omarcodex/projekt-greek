@@ -19,6 +19,11 @@
   padding: 5%;
 }
 
+.spa-container {
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+
 body {
   background-color: lightBlue;
 }
