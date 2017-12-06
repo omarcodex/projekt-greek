@@ -12,16 +12,20 @@
 
 .masthead {
   background-color: grey;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/The_Seal_at_Mohenjo_Daro.jpg/800px-The_Seal_at_Mohenjo_Daro.jpg');
-  background-repeat: repeat;
-  min-width: 100vh;
-  min-height: 5vh;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Bell-Krater_with_Two_Female_Acrobats%2C_and_Cupids_Attending_a_Woman_LACMA_50.9.45_%282_of_2%29.jpg/556px-Bell-Krater_with_Two_Female_Acrobats%2C_and_Cupids_Attending_a_Woman_LACMA_50.9.45_%282_of_2%29.jpg');
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 5%;
 }
 
 body {
   background-color: lightBlue;
 }
 
+body h1 {
+  color: white;
+}
 body h2 {
   display: flex;
   justify-content: center;
@@ -40,7 +44,7 @@ body h2 {
   height: auto;
   float: left;
   padding: 2%;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .glyph:hover {
